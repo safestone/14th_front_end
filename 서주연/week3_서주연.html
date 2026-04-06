@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Style Learning Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black p-4 md:p-[25px] h-screen overflow-hidden font-mono">
+
+    <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] h-full overflow-hidden border border-zinc-800 rounded-sm">
+
+        <aside class="hidden md:flex flex-col bg-[#252526] text-white border-r border-black">
+            <div class="pl-[15px] pt-[20px] text-xs font-bold text-gray-400 select-none uppercase tracking-tight">Explorer</div>
+            <ul class="pl-[20px] pt-[10px] space-y-1 text-sm">
+                <li class="pl-4 py-1 bg-[#37373d] cursor-pointer">Week_01</li>
+                <li class="pl-4 py-1 hover:bg-[#37373d] cursor-pointer text-gray-400 hover:text-white">Week_02</li>
+                <li class="pl-4 py-1 hover:bg-[#37373d] cursor-pointer text-gray-400 hover:text-white">Week_03</li>
+                <li class="pl-4 py-1 hover:bg-[#37373d] cursor-pointer text-gray-400 hover:text-white">Week_04</li>
+            </ul>
+        </aside>
+
+        <main class="flex flex-col bg-[#1e1e1e] text-[#d4d4d4] overflow-hidden">
+            
+            <div class="md:hidden relative p-3 bg-[#252526] border-b border-black">
+                <input type="checkbox" id="menu-toggle" class="peer hidden">
+                
+                <label for="menu-toggle" class="flex items-center justify-between w-full p-2 bg-[#3c3c3c] rounded cursor-pointer select-none">
+                    <span class="flex items-center gap-2 text-sm text-white font-bold">📂 Week_01</span>
+                    <span class="text-[10px] transition-transform duration-200 peer-checked:rotate-180">▲</span>
+                </label>
+
+                <ul class="hidden peer-checked:block absolute left-3 right-3 top-full mt-1 bg-[#252526] border border-zinc-700 shadow-2xl z-50 rounded-sm overflow-hidden">
+                    <li class="p-3 text-sm bg-[#37373d] border-b border-zinc-800 cursor-pointer">Week_01</li>
+                    <li class="p-3 text-sm hover:bg-[#37373d] border-b border-zinc-800 cursor-pointer">Week_02</li>
+                    <li class="p-3 text-sm hover:bg-[#37373d] border-b border-zinc-800 cursor-pointer">Week_03</li>
+                    <li class="p-3 text-sm hover:bg-[#37373d] cursor-pointer">Week_04</li>
+                </ul>
+            </div>
+
+            <div class="hidden md:flex h-[35px] bg-[#252526] select-none text-[13px]">
+                <div class="w-[120px] flex items-center justify-center bg-[#1e1e1e] text-[#fef65e] border-t border-[#fef65e]">Frontend.js</div>
+                <div class="w-[120px] flex items-center justify-center text-[#999999] bg-[#2d2d2d] hover:text-white cursor-pointer border-r border-black">Backend.java</div>
+            </div>
+
+            <div class="p-4 md:p-6 overflow-auto leading-relaxed h-full">
+                <ol class="[counter-reset:line] list-none text-[13px] md:text-sm space-y-1">
+                    
+                    <li class="flex [counter-increment:line] before:content-[counter(line)] before:text-[#858585] before:w-10 before:mr-4 before:text-right before:select-none">
+                        <span class="text-[#6a9955] italic">//1주차 학습 내용</span>
+                    </li>
+
+                    <li class="flex [counter-increment:line] before:content-[counter(line)] before:text-[#858585] before:w-10 before:mr-4 before:text-right">
+                        <div>
+                            <span class="text-[#569cd6]">const</span>
+                            <span class="text-[#d4d4d4]"> StudtTopic = </span>
+                            <span class="text-[#ce9178]">"Frontend Track"</span><span class="text-[#d4d4d4]">;</span>
+                        </div>
+                    </li>
+
+                    <li class="flex [counter-increment:line] before:content-[counter(line)] before:text-[#858585] before:w-10 before:mr-4 before:text-right">
+                        <div>
+                            <span class="text-[#569cd6]">const</span>
+                            <span class="text-[#d4d4d4]"> StudtTitle = </span>
+                            <span class="text-[#ce9178]">"통합 git 세션"</span><span class="text-[#d4d4d4]">;</span>
+                        </div>
+                    </li>
+
+                    <li class="flex h-5 [counter-increment:line] before:content-[counter(line)] before:text-[#858585] before:w-10 before:mr-4 before:text-right"></li>
+
+                    <li class="flex [counter-increment:line] before:content-[counter(line)] before:text-[#858585] before:w-10 before:mr-4 before:text-right">
+                        <div>
+                            <span class="text-[#569cd6]">function </span>
+                            <span class="text-[#dcdcaa]">learn</span>
+                            <span class="text-[#d4d4d4]">() {</span>
+                        </div>
+                    </li>
+
+                    <li class="flex [counter-increment:line] before:content-[counter(line)] before:text-[#858585] before:w-10 before:mr-4 before:text-right">
+                        <div class="pl-8 flex flex-wrap">
+                            <span class="text-[#dcdcaa]">console</span><span class="text-[#d4d4d4]">.</span><span class="text-[#dcdcaa]">log</span><span class="text-[#d4d4d4]">( </span>
+                            <span class="text-[#ce9178]">"프론트, 백 모두 github 사용법에 대해 배웁니다."</span>
+                            <span class="text-[#d4d4d4]"> );</span>
+                        </div>
+                    </li>
+
+                    <li class="flex [counter-increment:line] before:content-[counter(line)] before:text-[#858585] before:w-10 before:mr-4 before:text-right">
+                        <div class="pl-8 flex flex-wrap">
+                            <span class="text-[#dcdcaa]">console</span><span class="text-[#d4d4d4]">.</span><span class="text-[#dcdcaa]">log</span><span class="text-[#d4d4d4]">( </span>
+                            <span class="text-[#ce9178]">"미래에 협업을 위한, 동아리 활동 지속을 위한 간단한 사용방법을 익힙니다."</span>
+                            <span class="text-[#d4d4d4]"> );</span>
+                        </div>
+                    </li>
+
+                    <li class="flex [counter-increment:line] before:content-[counter(line)] before:text-[#858585] before:w-10 before:mr-4 before:text-right">
+                        <span class="text-[#d4d4d4]">}</span>
+                    </li>
+
+                </ol>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
