@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Likelion IDE - Frontend Curriculum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen">
+  <div class="w-full min-h-screen flex flex-col lg:flex-row bg-[#252526] text-[#ffffff]">
+    <div class="flex-0.9 lg:hidden">
+      <details class="flex flex-col [&>ul>li]:pl-11 [&>ul>li]:p-4 [&>ul>li]:border-l-2 [&>ul>li]:border-transparent">
+        <summary class="flex items-center justify-between text-[#252526] [&>span]:text-[#ffffff] hover:bg-[#2a2d2e]">
+          <span class="p-4">📁 Week_01</span>
+          <span>▼</span>
+        </summary>
+        <ul>
+          <li class="hover:bg-[#2a2d2e] hover:border-yellow-400">Week_01</li>
+          <li class="hover:bg-[#2a2d2e] hover:border-yellow-400">Week_02</li>
+          <li class="hover:bg-[#2a2d2e] hover:border-yellow-400">Week_03</li>
+        </ul>
+      </details>
+    </div>
+
+    <aside class="flex-1 flex-col hidden md:block bg-[#252526] text-[#ffffff] [&>ul>li]:pl-10 [&>ul>li]:p-5 [&>ul>li]:border-l-2 [&>ul>li]:border-transparent">
+      <div class="p-5">EXPLORER</div>
+      <ul>
+        <li class="hover:bg-[#2a2d2e] hover:border-yellow-400">
+          📄 Week_01
+        </li>
+        <li class="hover:bg-[#2a2d2e] hover:border-yellow-400">
+          📄 Week_02
+        </li>
+        <li class="hover:bg-[#2a2d2e] hover:border-yellow-400">
+          📄 Week_03
+        </li>
+        <li class="hover:bg-[#2a2d2e] hover:border-yellow-400">
+          📄 Week_04
+        </li>
+      </ul>
+    </aside>
+
+    <main class="flex-[3] bg-[#1e1e1e]">
+      <div class="flex flex-row [&>div]:p-4 bg-[#252526]">
+        <div class="text-yellow-400 bg-[#1e1e1e] hover:bg-[#2a2d2e]">
+          Frontend.js
+        </div>
+        <div class="text-[#ffffff] hover:bg-[#2a2d2e] hover:text-yellow-400 active:bg-[#1e1e1e]">
+          Backend.java
+        </div>
+      </div>
+
+      <div class="[&>div>span:first-child]:text-[#858585] [&>div>span:first-child]:pr-4 [&>div]:m-2">
+
+        <div>
+          <span>1</span>
+          <span class="text-[#6A9955]">// 1주차 학습 내용</span>
+        </div>
+
+        <div>
+          <span>2</span>
+          <span class="text-[#ffffff]">
+            <span class="text-[#569CD6]">const</span>
+            <span class="text-[#4FC1FF]">StudyTopic</span> =
+            <span class="text-[#CE9178]">"Frontend Track"</span>;
+          </span>
+        </div>
+
+        <div>
+          <span>3</span>
+          <span class="text-[#ffffff]">
+            <span class="text-[#569CD6]">const</span>
+            <span class="text-[#4FC1FF]">StudyTitle</span> =
+            <span class="text-[#CE9178]">"통합 git 세션"</span>;
+          </span>
+        </div>
+
+        <div>
+          <span>4</span>
+          <span></span>
+        </div>
+
+        <div>
+          <span>5</span>
+          <span class="text-[#ffffff]">
+            <span class="text-[#569CD6]">function</span>
+            <span class="text-[#DCDCAA]">learn</span>() {
+          </span>
+        </div>
+
+        <div>
+          <span>6</span>
+          <span class="text-[#ffffff]">
+            <span class="text-[#9CDCFE] pl-10">console</span>.<span class="text-[#DCDCAA]">log</span>(
+            <span class="text-[#CE9178]">"프론트, 백 모두 github 사용법에 대해 배웁니다."</span>
+            );
+          </span>
+        </div>
+
+        <div>
+          <span>7</span>
+          <span class="text-[#ffffff]">
+            <span class="text-[#9CDCFE] pl-10">console</span>.<span class="text-[#DCDCAA]">log</span>(
+            <span class="text-[#CE9178]">"미래에 협업을 위한, 동아리 활동 지속을 위한 간단한 사용방법을 익힙니다."</span>
+            );
+          </span>
+        </div>
+
+        <div>
+          <span>8</span>
+          <span class="text-[#ffffff]">}</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
