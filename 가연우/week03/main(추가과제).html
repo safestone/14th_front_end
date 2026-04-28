@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멋쟁이 사자처럼 프론트엔드</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#1e1e1e] text-white">
+
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_4fr] grid-rows-[auto_1fr] h-screen">
+
+        <!-- Explorer 타이틀 (모바일 숨김) -->
+        <div class="hidden md:block p-5 bg-[#252526] border-b border-[#333] text-sm leading-8 font-mono">
+            explorer
+        </div>
+
+        <!-- 메뉴 탭 (모바일 숨김) -->
+        <div class="hidden md:flex flex-row justify-start bg-[#252526] border-b border-[#333] text-sm leading-8 font-mono">
+            <div id="frontend" class="p-5 hover:bg-[#37373d] transition-all duration-300 cursor-pointer">Frontend.js</div>
+            <div id="backend" class="p-5 hover:bg-[#37373d] transition-all duration-300 cursor-pointer">Backend.java</div>
+        </div>
+
+        <!-- 사이드바 리스트 (모바일 숨김) -->
+        <div class="hidden md:flex flex-col bg-[#252526] border-r border-[#333] text-sm leading-8 font-mono">
+            <div id="week1" class="p-5 hover:bg-[#37373d] transition-all duration-300 cursor-pointer">week_01</div>
+            <div id="week2" class="p-5 hover:bg-[#37373d] transition-all duration-300 cursor-pointer">week_02</div>
+            <div id="week3" class="p-5 hover:bg-[#37373d] transition-all duration-300 cursor-pointer">week_03</div>
+            <div id="week4" class="p-5 hover:bg-[#37373d] transition-all duration-300 cursor-pointer">week_04</div>
+        </div>
+
+        <!-- ✅ 모바일 드롭다운 (focus-within CSS-only) -->
+        <div class="md:hidden relative bg-[#252526] border-b border-[#333] font-mono text-sm"
+             tabindex="0"
+             id="dropdownWrap">
+
+            <!-- 폴더 버튼 -->
+            <div class="flex items-center gap-2 px-4 py-3 cursor-pointer select-none">
+                <!-- 폴더 아이콘 -->
+                <svg class="w-4 h-4 text-[#e8c56d]" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2 6a2 2 0 012-2h4l2 2h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/>
+                </svg>
+                <span id="currentWeek" class="text-white">week_01</span>
+                <!-- 화살표: focus-within 시 회전 -->
+                <svg class="w-3 h-3 text-[#888] transition-transform duration-200 focus-within:rotate-180"
+                     id="arrowIcon"
+                     viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </div>
+
+            <!-- 드롭다운 리스트: focus-within 시 표시 -->
+            <ul class="absolute left-0 top-full w-40 z-50
+                       bg-[#252526] border border-[#333]
+                       opacity-0 pointer-events-none -translate-y-1
+                       focus-within:opacity-100 focus-within:pointer-events-auto focus-within:translate-y-0
+                       transition-all duration-200 ease-out
+                       list-none m-0 p-0">
+
+                <li><a href="week01.html" class="flex items-center gap-2 px-4 py-2 text-[#ccc] hover:bg-[#37373d] transition-colors no-underline">
+                    <svg class="w-3 h-3 text-[#e8c56d]" viewBox="0 0 24 24" fill="currentColor"><path d="M2 6a2 2 0 012-2h4l2 2h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+                    week_01
+                </a></li>
+                <li><a href="week02.html" class="flex items-center gap-2 px-4 py-2 text-[#ccc] hover:bg-[#37373d] transition-colors no-underline">
+                    <svg class="w-3 h-3 text-[#e8c56d]" viewBox="0 0 24 24" fill="currentColor"><path d="M2 6a2 2 0 012-2h4l2 2h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+                    week_02
+                </a></li>
+                <li><a href="week03.html" class="flex items-center gap-2 px-4 py-2 text-[#ccc] hover:bg-[#37373d] transition-colors no-underline">
+                    <svg class="w-3 h-3 text-[#e8c56d]" viewBox="0 0 24 24" fill="currentColor"><path d="M2 6a2 2 0 012-2h4l2 2h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+                    week_03
+                </a></li>
+                <li><a href="week04.html" class="flex items-center gap-2 px-4 py-2 text-[#ccc] hover:bg-[#37373d] transition-colors no-underline">
+                    <svg class="w-3 h-3 text-[#e8c56d]" viewBox="0 0 24 24" fill="currentColor"><path d="M2 6a2 2 0 012-2h4l2 2h8a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/></svg>
+                    week_04
+                </a></li>
+                <!-- week_05 ~ week_11 동일하게 추가 -->
+            </ul>
+        </div>
+
+        <!-- 메인 보드 -->
+        <div class="bg-[#2d2d2d] p-6 overflow-auto col-span-1 md:col-span-1">
+            <div class="text-sm leading-8 font-mono">
+                //1주차 학습내용<br>
+                const StudyTopic = "Frontend Track";<br>
+                const StudyTopic = "통합 git 세션";<br>
+                function learn() {<br>
+                console.log("프론트, 백 모두 gitHub 사용법에 대해 배웁니다.");<br>
+                console.log("미래에 협업을 위한, 동아리 활동 지속을 위한 간단한 사용방법을 익힙니다.");<br>
+                }
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+</html>
