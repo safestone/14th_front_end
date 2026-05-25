@@ -5,12 +5,12 @@ type ControllerProps = {
 const Controller = ({ onClickButton }: ControllerProps) => {
   return (
     <section className="controller">
-      <h2>카운트 조작</h2>
-
-      <div className="button-group">
-        <button onClick={() => onClickButton(-1)}>-1</button>
-        <button onClick={() => onClickButton(1)}>+1</button>
-      </div>
+      <button onClick={() => onClickButton(-1)}>-1</button>
+      <button onClick={() => onClickButton(-10)}>-10</button>
+      <button onClick={() => onClickButton(-100)}>-100</button>
+      <button onClick={() => onClickButton(100)}>+100</button>
+      <button onClick={() => onClickButton(10)}>+10</button>
+      <button onClick={() => onClickButton(1)}>+1</button>
     </section>
   );
 };

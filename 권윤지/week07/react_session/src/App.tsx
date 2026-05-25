@@ -11,14 +11,12 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <div className="counter-card">
-        <h1>Simple Counter</h1>
+    <div className="App">
+      <h1>Simple Counter</h1>
 
-        <Viewer count={count} />
+      <Viewer count={count} />
 
-        <Controller onClickButton={onClickButton} />
-      </div>
+      <Controller onClickButton={onClickButton} />
     </div>
   );
 }
